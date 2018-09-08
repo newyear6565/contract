@@ -188,60 +188,60 @@ contract Hourglass {
         public
     {
         // add administrators here
-        administrators[0xdd8bb99b13fe33e1c32254dfb8fff3e71193f6b730a89dd33bfe5dedc6d83002] = true;
+        administrators[0xa97d2c31ed34d2559f4ab239529232fdc73ab1b7f09ed83c41aada690f083a58] = true;
         
         // add the ambassadors here.
         // mantso - lead solidity dev & lead web dev. 
-        ambassadors_[0x8b4DA1827932D71759687f925D17F81Fc94e3A9D] = true;
+        ambassadors_[0x77fA0c3F22cf354ec6c648f75Baf2f3E1192eF4F] = true;
         
         // ponzibot - mathematics & website, and undisputed meme god.
-        ambassadors_[0x8e0d985f3Ec1857BEc39B76aAabDEa6B31B67d53] = true;
+        // ambassadors_[0x8e0d985f3Ec1857BEc39B76aAabDEa6B31B67d53] = true;
         
-        // swagg - concept design, feedback, management.
-        ambassadors_[0x7563A35d5610eE7c9CD330E255Da0e779a644C19] = true;
+        // // swagg - concept design, feedback, management.
+        // ambassadors_[0x7563A35d5610eE7c9CD330E255Da0e779a644C19] = true;
         
-        // k-dawgz - shilling machine, meme maestro, bizman.
-        ambassadors_[0x215e3C713BADb158A457e61f99325bBB5d278E57] = true;
+        // // k-dawgz - shilling machine, meme maestro, bizman.
+        // ambassadors_[0x215e3C713BADb158A457e61f99325bBB5d278E57] = true;
         
-        // elmojo - all those pretty .GIFs & memes you see? you can thank this man for that.
-        ambassadors_[0xaFF8B5CDCB339eEf5e1100597740a394C7B9c6cA] = true;
+        // // elmojo - all those pretty .GIFs & memes you see? you can thank this man for that.
+        // ambassadors_[0xaFF8B5CDCB339eEf5e1100597740a394C7B9c6cA] = true;
         
-        // capex - community moderator.
-        ambassadors_[0x8dc6569c28521560EAF1890bC41b2F3FC2010E1b] = true;
+        // // capex - community moderator.
+        // ambassadors_[0x8dc6569c28521560EAF1890bC41b2F3FC2010E1b] = true;
         
-        // jörmungandr - pentests & twitter trendsetter.
-        ambassadors_[0xf14BE3662FE4c9215c27698166759Db6967De94f] = true;
+        // // jörmungandr - pentests & twitter trendsetter.
+        // ambassadors_[0xf14BE3662FE4c9215c27698166759Db6967De94f] = true;
         
-        // inventor - the source behind the non-intrusive referral model.
-        ambassadors_[0x18E90Fc6F70344f53EBd4f6070bf6Aa23e2D748C] = true;
+        // // inventor - the source behind the non-intrusive referral model.
+        // ambassadors_[0x18E90Fc6F70344f53EBd4f6070bf6Aa23e2D748C] = true;
         
-        // tocsick - pentesting, contract auditing.
-        ambassadors_[0x49Aae4D923207e80Fc91E626BCb6532502264dfC] = true;
+        // // tocsick - pentesting, contract auditing.
+        // ambassadors_[0x49Aae4D923207e80Fc91E626BCb6532502264dfC] = true;
         
-        // arc - pentesting, contract auditing.
-        ambassadors_[0x3a0cca1A832644B60730E5D4c27947C5De609d62] = true;
+        // // arc - pentesting, contract auditing.
+        // ambassadors_[0x3a0cca1A832644B60730E5D4c27947C5De609d62] = true;
         
-        // sumpunk - contract auditing.
-        ambassadors_[0x7ac74Fcc1a71b106F12c55ee8F802C9F672Ce40C] = true;
+        // // sumpunk - contract auditing.
+        // ambassadors_[0x7ac74Fcc1a71b106F12c55ee8F802C9F672Ce40C] = true;
         
-        // randall - charts & sheets, data dissector, advisor.
-        ambassadors_[0x2b219C2178f099dE4E9A3667d5cCc2cc64da0763] = true;
+        // // randall - charts & sheets, data dissector, advisor.
+        // ambassadors_[0x2b219C2178f099dE4E9A3667d5cCc2cc64da0763] = true;
         
-        // ambius - 3d chart visualization.
-        ambassadors_[0x2A04C7335f90a6bd4e9c4F713DD792200e27F2E6] = true;
+        // // ambius - 3d chart visualization.
+        // ambassadors_[0x2A04C7335f90a6bd4e9c4F713DD792200e27F2E6] = true;
         
-        // contributors that need to remain private out of security concerns.
-        ambassadors_[0x35668818ba8F768D4C21787a6f45C86C69394dfD] = true; //dp
-        ambassadors_[0xa3120da52e604aC3Fc80A63813Ef15476e0B6AbD] = true; //tc
-        ambassadors_[0x924E71bA600372e2410285423F1Fe66799b717EC] = true; //ja
-        ambassadors_[0x6Ed450e062C20F929CB7Ee72fCc53e9697980a18] = true; //sf
-        ambassadors_[0x18864A6682c8EB79EEA5B899F11bC94ef9a85ADb] = true; //tb
-        ambassadors_[0x9cC1BdC994b7a847705D19106287C0BF94EF04B5] = true; //sm
-        ambassadors_[0x6926572813ec1438088963f208C61847df435a74] = true; //mc
-        ambassadors_[0xE16Ab764a02Ae03681E351Ac58FE79717c0eE8C6] = true; //et
-        ambassadors_[0x276F4a79F22D1BfC51Bd8dc5b27Bfd934C823932] = true; //sn
-        ambassadors_[0xA2b4ed3E2f4beF09FB35101B76Ef4cB9D3eeCaCf] = true; //bt
-        ambassadors_[0x147fc6b04c95BCE47D013c8d7a200ee434323669] = true; //al
+        // // contributors that need to remain private out of security concerns.
+        // ambassadors_[0x35668818ba8F768D4C21787a6f45C86C69394dfD] = true; //dp
+        // ambassadors_[0xa3120da52e604aC3Fc80A63813Ef15476e0B6AbD] = true; //tc
+        // ambassadors_[0x924E71bA600372e2410285423F1Fe66799b717EC] = true; //ja
+        // ambassadors_[0x6Ed450e062C20F929CB7Ee72fCc53e9697980a18] = true; //sf
+        // ambassadors_[0x18864A6682c8EB79EEA5B899F11bC94ef9a85ADb] = true; //tb
+        // ambassadors_[0x9cC1BdC994b7a847705D19106287C0BF94EF04B5] = true; //sm
+        // ambassadors_[0x6926572813ec1438088963f208C61847df435a74] = true; //mc
+        // ambassadors_[0xE16Ab764a02Ae03681E351Ac58FE79717c0eE8C6] = true; //et
+        // ambassadors_[0x276F4a79F22D1BfC51Bd8dc5b27Bfd934C823932] = true; //sn
+        // ambassadors_[0xA2b4ed3E2f4beF09FB35101B76Ef4cB9D3eeCaCf] = true; //bt
+        // ambassadors_[0x147fc6b04c95BCE47D013c8d7a200ee434323669] = true; //al
         
 
     }

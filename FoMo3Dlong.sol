@@ -29,9 +29,9 @@ contract FoMo3Dlong is F3Devents {
     string constant public symbol = "F3D";
     uint256 private rndExtra_ = 30;//extSettings.getLongExtra();     // length of the very first ICO
     uint256 private rndGap_ = 30; //extSettings.getLongGap();         // length of ICO phase, set to 1 year for EOS.
-    uint256 constant private rndInit_ = 5 minutes;                // round timer starts at this
+    uint256 constant private rndInit_ = 1 hours;                // round timer starts at this
     uint256 constant private rndInc_ = 30 seconds;              // every full key purchased adds this much to the timer
-    uint256 constant private rndMax_ = 10 minutes;                // max length a round timer can be
+    uint256 constant private rndMax_ = 24 hours;                // max length a round timer can be
     //==============================================================================
     //     _| _ _|_ _    _ _ _|_    _   .
     //    (_|(_| | (_|  _\(/_ | |_||_)  .  (data used to store game info that changes)
@@ -1497,5 +1497,19 @@ contract FoMo3Dlong is F3Devents {
         round_[1].end = now + rndInit_ + rndExtra_;
     }
 
+    function getBalance()
+    public
+    view
+    returns(uint)
+    {
+        require(msg.sender == owner);
+        return address(this).balance;
+    }
 
+    function kill ()
+    public
+    {
+        require(msg.sender == owner);
+        selfdestruct(owner);
+    }
 }

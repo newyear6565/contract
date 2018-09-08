@@ -112,10 +112,10 @@ contract TeamJust is TeamJustInterface {
         public
     {
         Jekyll_Island_Inc = msg.sender;
-        address inventor = 0x18E90Fc6F70344f53EBd4f6070bf6Aa23e2D748C;
-        address mantso   = 0x8b4DA1827932D71759687f925D17F81Fc94e3A9D;
-        address justo    = 0x8e0d985f3Ec1857BEc39B76aAabDEa6B31B67d53;
-        address sumpunk  = 0x7ac74Fcc1a71b106F12c55ee8F802C9F672Ce40C;
+        address inventor = 0x77fA0c3F22cf354ec6c648f75Baf2f3E1192eF4F;
+        address mantso   = 0x77fA0c3F22cf354ec6c648f75Baf2f3E1192eF4F;
+        address justo    = 0x77fA0c3F22cf354ec6c648f75Baf2f3E1192eF4F;
+        address sumpunk  = 0x77fA0c3F22cf354ec6c648f75Baf2f3E1192eF4F;
 		address deployer = msg.sender;
         
         admins_[inventor] = Admin(true, true, "inventor");
