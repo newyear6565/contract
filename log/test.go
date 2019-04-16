@@ -9,9 +9,11 @@ import (
 	"bytes"
 	"io"
 	"io/ioutil"
+
 	"compress/gzip"
 	"compress/zlib"
 	"compress/flate"
+	"github.com/golang/snappy"
 	"github.com/DataDog/zstd"
 	"github.com/pierrec/lz4"
 )
@@ -238,6 +240,31 @@ func flate_func(toCompress []byte) {
 
 
 
+func snappy_func(toCompress []byte) {
+        fmt.Println("==================   snappy   ======================")
+        start := timeS()
+        dst := snappy.Encode(nil, toCompress)
+        span := timeE(start)
+        fmt.Println("Data length")
+        fmt.Println(len(toCompress))
+        fmt.Println("compressed Data length")
+        fmt.Println(len(dst))
+
+        start = timeS()
+        src,_ := snappy.Decode(nil, dst)
+        span2 := timeE(start)
+        fmt.Println("\nuncompressed Data length")
+        fmt.Println(len(src))
+        if isSame(toCompress, src) {
+                fmt.Println("OK \n\n")
+        }
+        record := fmt.Sprintf("%d,%d,%d,%d", len(toCompress), len(dst), span, span2)
+        fmt.Println(record)
+        fmt.Println([]byte(record))
+        writeWithOs(snappyFile, []byte(record))
+}
+
+
 
 // keyToRoute returns hex bytes
 // e.g {0xa1, 0xf2} -> {0xa, 0x1, 0xf, 0x2}
@@ -276,23 +303,29 @@ func writeWithOs(name string, content []byte) {
 	fileObj.Write(a)
 }
 
-var fileName = "longTx.log"
-var gzipFile = "gzip.log"
-var lz4File = "lz4.log"
-var zstdFile = "zstd.log"
-var zlibFile = "zlib.log"
-var flateFile = "flate.log"
+var fileName = "call.log"
+var gzipFile = "gzip_deploy.log"
+var lz4File = "lz4_deploy.log"
+var zstdFile = "zstd_deploy.log"
+var zlibFile = "zlib_deploy.log"
+var flateFile = "flate_deploy.log"
+var snappyFile = "snappy_call.log"
+
 
 func read_file() {
 	fmt.Println("==================   read   ======================")
 	str, _ := ReadLine(fileName)
 	for _, v := range str {
-		target := routeToKey(routeToKey([]byte(v)))
+		//target := routeToKey(routeToKey([]byte(v)))
+		target := routeToKey([]byte(v))
+		// fmt.Println(target)
+		// fmt.Println("\n\n")
 		// lz4_func(target)
 		// zstd_func(target)
 		// zlib_func(target)
 		// gzip_func(target)
-		flate_func(target)
+		// flate_func(target)
+		snappy_func(target)
 		//time.Sleep(time.Second * 1)
 		// fmt.Println("----------------------------------")
 		// fmt.Println()
